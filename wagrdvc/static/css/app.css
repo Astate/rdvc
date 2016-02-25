@@ -1,0 +1,34 @@
+.header{
+  
+    background-image: url("../img/logofond.png");
+     background-repeat: no-repeat;
+      background-position: 30% 20%; 
+ /* 
+  * background-color: #f35201;
+    width: 100%;
+   
+    background-size: cover;*/
+}
+.top-bar .menu{
+    background-color: #f35201;
+    
+
+ /*     background-image: url("../img/bg1.jpg");
+  background-color: #fff4c7;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+.top-bar {
+   color:white;
+    background-color: #f35201;
+ /*     background-image: url("../img/bg1.jpg");
+  background-color: #fff4c7;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+.menu a {
+      color: #fff !important;
+   }

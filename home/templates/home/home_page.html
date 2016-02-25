@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% load wagtailcore_tags %}
+
+{% block body_class %}template-homepage{% endblock %}
+
+
+
+{% block content %}
+
+    
+    
+    <div class="row">
+<div class="medium-6 columns medium-push-6">
+<img class="thumbnail"  src="{% static "img/bloc_gimp2.jpg" %}" alt="My image">
+</div>
+<div class="medium-6 columns medium-pull-6">
+{{ page.body|richtext }}
+</div>
+</div>
+<div class="row">
+<div class="medium-4 columns">
+<h3>Colone 1</h3>
+<p>Une salle d'eau divisée en trois (douche, évier et toilette) complète le tout. Une salle de loisirs, une salle vidéo avec écran géant comprenant Super Écran, une quarantaine de canaux de télévision et plusieurs autres commodités dont le service de conciergerie dans les aires communes de l'immeuble et la disponibilité de buanderie payante au sous-sol, sont quelques caractéristiques des Résidences du Vieux-Château.
+
+</p>
+</div>
+<div class="medium-4 columns">
+<h3>Colone 2</h3>
+<p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+</div>
+<div class="medium-4 columns">
+<h3>Colone 3</h3>
+<p>Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna.</p>
+</div>
+</div>
+<hr>
+{% endblock %}

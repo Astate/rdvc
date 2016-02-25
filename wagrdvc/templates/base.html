@@ -1,0 +1,73 @@
+{% load static wagtailuserbar %}
+{% load static %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>{% block title %}{% if self.seo_title %}{{ self.seo_title }}{% else %}{{ self.title }}{% endif %}{% endblock %}{% block title_suffix %}{% endblock %}</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {# Global stylesheets #}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/foundation.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
+
+        {% block extra_css %}
+            {# Override this in templates to add extra stylesheets #}
+        {% endblock %}
+    </head>
+
+    <body class="{% block body_class %}{% endblock %}">
+<div class="top-bar">
+    <div class="top-bar-left">
+        <ul class="menu">
+            <li class="menu-text"><img src="{% static "img/chapeau20blanc.png" %}" alt="My image"/></li>
+            <li><a href="#">Un</a></li>
+            <li><a href="#">Deux</a></li>
+        </ul>
+    </div>
+    <div class="top-bar-right">
+        <ul class="menu">
+            <li><a href="#">Trois</a></li>
+            <li><a href="#">Quatre</a></li>
+            <li><a href="#">Cinq</a></li>
+            <li><a href="#">Six</a></li>
+        </ul>
+    </div>
+</div>
+<div class="callout large header">
+    <div class="row">
+            <div class="medium-7 columns"></div>
+        <div class="medium-3 columns">    <img  src="{% static "img/logoblancorange.png" %}"></div>
+</div>
+    <div class="row column text-center">
+
+        <p class="lead">Proximité, Vie étudiante, Confort, Sécurité</p>
+        
+        <a href="#" class="button large">Inscription</a>
+
+    </div>
+</div>
+    {% wagtailuserbar %}
+
+        {% block content %}{% endblock %}
+
+
+        
+        {# Global javascript #}
+
+        <script type="text/javascript" src="{% static 'js/vendor/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/vendor/what-input.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/foundation.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+
+
+        {% block extra_js %}
+            {# Override this in templates to add extra javascript #}
+        {% endblock %}
+    </body>
+</html>

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block body_class %}template-confirmation{% endblock %}
+
+{% block content %}
+    <h1>{{ page.confirmationpage_title }}</h1>
+
+    <p>
+        Thanks, nom: {{ reservation.nom }}! prenom: {{ reservation.prenom }} 
+    </p>
+{% endblock %}
